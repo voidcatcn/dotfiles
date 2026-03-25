@@ -1,0 +1,50 @@
+# =============================================================================
+# .gitconfig - Git Global Configuration (Safe Version)
+# 安全说明：已移除 [user] 部分，避免隐私泄露。
+# Codespaces 会自动注入用户信息，本地使用请手动运行：
+#   git config --global user.name "Your Name"
+#   git config --global user.email "your.email@example.com"
+# =============================================================================
+
+[core]
+	editor = code --wait
+	autocrlf = input
+	filemode = true
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = simple
+	followTags = true
+
+[pull]
+	ff = only
+
+[merge]
+	conflictstyle = diff3
+	ff = true
+
+[credential]
+	# Codespaces 会自动处理 credential，此处保留默认或缓存策略
+	helper = cache
+
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	df = diff
+	lg = log --oneline --graph --decorate
+	ps = push
+	pl = pull
+	force = push --force-with-lease
+
+[fetch]
+	pruneTags = true
